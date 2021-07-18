@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+import 'package:delivery_app/configs/constants/app_constants.dart';
+import 'package:delivery_app/configs/styles/custom_text_style.dart';
+import 'package:delivery_app/widgets/custom_text_field.dart';
+
+class CustomTextAndTextFieldWidget extends StatelessWidget {
+
+  final String text;
+  final int maxLines;
+  final String hintText;
+  CustomTextAndTextFieldWidget({this.text,this.maxLines,this.hintText});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("  $text",style: CustomTextStyle.smallBoldTextStyle1(),),
+          SizedBox(height: 10,),
+          CustomTextField(borderRadius: BorderRadius.circular(AppConstants.borderRadius,),maxLines: maxLines?? 1,hintText: hintText?? "",),
+        ],
+      ),
+    );
+  }
+}
