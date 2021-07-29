@@ -1,3 +1,4 @@
+import 'package:delivery_app/views/bottom_nav_bar/bottom_nav_screen.dart';
 import 'package:delivery_app/views/home/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -59,8 +60,8 @@ class PaymentReceivedScreen extends StatelessWidget {
 
               CustomInkWell(
                 onTap: (){
-                  Get.offAll(HomeScreen());
-                },
+                  Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context){return HomeScreen();}),(Route<dynamic> route) => false);
+                  },
                 child: FullWidthButton(
                   color: AppColors.primaryDarkOrange,
                   title: "Submit",
@@ -68,8 +69,8 @@ class PaymentReceivedScreen extends StatelessWidget {
               ),
               CustomInkWell(
                   onTap: (){
-                    Get.offAll(HomeScreen());
-                  },
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context){return HomeScreen();}),(Route<dynamic> route) => false);
+                    },
                   child: Text("Skip Rating",style: CustomTextStyle.boldMediumTextStyle(fontFamily: "PoppinsRegular"),))
             ],
           ),

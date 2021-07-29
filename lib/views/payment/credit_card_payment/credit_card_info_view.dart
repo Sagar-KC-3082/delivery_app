@@ -41,7 +41,9 @@ class CreditCardInfoScreen extends StatelessWidget {
               FullWidthButton(
                 color: AppColors.primaryDarkOrange,
                 title: "Add Card",
-                onTap: (){Get.to(AddCreditCard());},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context){return AddCreditCard();}));
+                  },
               )
 
             ],

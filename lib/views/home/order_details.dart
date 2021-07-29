@@ -158,7 +158,9 @@ class OrderDetail extends StatelessWidget {
 
                       SizedBox(height:10,),
                       CustomInkWell(
-                          onTap: (){Get.to(Map1View());},
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context){return Map1View();}));
+                            },
                           child: AddOrRejectWidget()),
                       SizedBox(height:10,),
 
@@ -192,7 +194,7 @@ class _ColorfulAppBarState extends State<ColorfulAppBar> {
         children: [
           CustomInkWell(
               onTap: (){
-                Get.back();
+                Navigator.pop(context);;
               },
               child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
           Spacer(),

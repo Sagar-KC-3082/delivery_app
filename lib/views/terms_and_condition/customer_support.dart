@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:delivery_app/configs/constants/app_constants.dart';
 import 'package:delivery_app/configs/styles/app_colors.dart';
 import 'package:delivery_app/widgets/custom_appbar.dart';
@@ -35,7 +34,7 @@ class CustomerSupportScreen extends StatelessWidget {
                 color: AppColors.primaryDarkOrange,
                 title: "Save",
                 onTap: (){
-                  Get.back();
+                  Navigator.pop(context);;
                 },
               )
             ],

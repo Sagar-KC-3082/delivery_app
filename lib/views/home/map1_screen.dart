@@ -63,8 +63,8 @@ class Map1View extends StatelessWidget {
               SizedBox(height: 30,),
               CustomInkWell(
                   onTap: (){
-                    Get.to(DeliverySuccessfulScreen());
-                  },
+                    Navigator.push(context, MaterialPageRoute(builder: (context){return DeliverySuccessfulScreen();}));
+                    },
                   child: AddOrRejectWidget()),
               SizedBox(height: 10,)
             ],

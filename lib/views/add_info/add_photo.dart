@@ -61,7 +61,8 @@ class AddPhotoView extends StatelessWidget {
                 color: AppColors.primaryDarkOrange,
                 title: "Continue",
                 onTap: (){
-                 Get.to(PaymentMethod());
+                  Navigator.push(context, MaterialPageRoute(builder: (context){return PaymentMethod();}));
+                  // Get.to(PaymentMethod());
                 },
               )
             ],

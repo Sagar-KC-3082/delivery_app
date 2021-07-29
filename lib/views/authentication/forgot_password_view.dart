@@ -50,7 +50,6 @@ class ForgotPasswordView extends StatelessWidget {
                   FullWidthButton(color: AppColors.primaryDarkBlue,title: "SEND",onTap: (){
                     FocusScope.of(context).unfocus();
                     if(_formKey3.currentState.validate()){
-                      // Get.to(TempHome());
                     }
                   },),
                   SizedBox(height: Get.height*0.07,),
@@ -61,7 +60,9 @@ class ForgotPasswordView extends StatelessWidget {
                       children: [
                         Text("Don't have an account?",style: CustomTextStyle.mediumTextStyle()),
                         CustomInkWell(
-                            onTap: (){Get.to(SignUpView());},
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){return SignUpView();}));
+                              },
                             child: Text(" Sign Up",style: CustomTextStyle.boldMediumTextStyle())),
 
                       ],

@@ -148,7 +148,7 @@ class CurrentOrderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomInkWell(
       onTap: (){
-        Get.to(OrderDetail());
+        Navigator.push(context, MaterialPageRoute(builder: (context){return OrderDetail();}));
       },
       child: Container(
         decoration: BoxDecoration(

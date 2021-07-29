@@ -71,7 +71,7 @@ class _ColorfulAppBarState extends State<ColorfulAppBar> {
         children: [
           CustomInkWell(
               onTap: (){
-                Get.back();
+                Navigator.pop(context);;
               },
               child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
           Spacer(),

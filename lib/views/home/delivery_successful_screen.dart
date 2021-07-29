@@ -89,8 +89,8 @@ class DeliverySuccessfulScreen extends StatelessWidget {
                 color: AppColors.primaryDarkOrange,
                 title: "Delivery Successful",
                 onTap: (){
-                  Get.to(PaymentReceivedScreen());
-                },
+                  Navigator.push(context, MaterialPageRoute(builder: (context){return PaymentReceivedScreen();}));
+                  },
               )
             ],
           ),

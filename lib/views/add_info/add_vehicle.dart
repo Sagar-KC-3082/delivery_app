@@ -27,18 +27,25 @@ class AddVehicleView extends StatelessWidget {
                       CustomAppBarRowWithCustomIcon(title: "Add Vehicle",),
                       SizedBox(height: 30,),
 
-                      CustomTextAndTextFieldWidget(text: "Vehicle Name",),
-                      CustomTextAndTextFieldWidget(text: "Vehicle Type",),
-                      CustomTextAndTextFieldWidget(text: "Vehicle Brand",),
-                      CustomTextAndTextFieldWidget(text: "Vehicle Color",),
-                      CustomTextAndTextFieldWidget(text: "Vehicle Number",),
+                     Expanded(
+                       child: ListView(
+                         shrinkWrap: true,
+                         children: [
+                           CustomTextAndTextFieldWidget(text: "Vehicle Name",),
+                           CustomTextAndTextFieldWidget(text: "Vehicle Type",),
+                           CustomTextAndTextFieldWidget(text: "Vehicle Brand",),
+                           CustomTextAndTextFieldWidget(text: "Vehicle Color",),
+                           CustomTextAndTextFieldWidget(text: "Vehicle Number",),
+                         ],
+                       ),
+                     ),
 
-                      Spacer(),
                       FullWidthButton(
                         color: AppColors.primaryDarkOrange,
                         title: "Continue",
                         onTap: (){
-                          Get.to(AddDocumentView());
+                          Navigator.push(context, MaterialPageRoute(builder: (context){return AddDocumentView();}));
+                          // Get.to(AddDocumentView());
                         },
                       )
 

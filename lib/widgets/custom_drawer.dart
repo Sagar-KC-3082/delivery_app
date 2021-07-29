@@ -46,24 +46,34 @@ class CustomDrawer extends StatelessWidget {
 
           CustomInkWell(
               onTap: (){
-                Get.back();
+                Navigator.pop(context);
                 },
               child: CustomRow(title: "Home",)
           ),
           CustomInkWell(
               onTap: (){
-                Get.to(NotificationScreen());
+                Navigator.push(context, MaterialPageRoute(builder: (context){return NotificationScreen();}));
+                // Get.to(NotificationScreen());
                   },
               child: CustomRow(title: "Notification",)
           ),
           CustomInkWell(
-              onTap: (){Get.to(OrderHistory());},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){return OrderHistory();}));
+                // Get.to(OrderHistory());
+                },
               child: CustomRow(title: "History",)),
           CustomInkWell(
-              onTap: (){Get.to(AccountMainScreen());},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){return AccountMainScreen();}));
+                // Get.to(AccountMainScreen());
+                },
               child: CustomRow(title: "Account",)),
           CustomInkWell(
-              onTap: (){Get.to(MyWalletScreen());},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){return MyWalletScreen();}));
+                // Get.to(MyWalletScreen());
+                },
               child: CustomRow(title: "Wallet",)),
 
 

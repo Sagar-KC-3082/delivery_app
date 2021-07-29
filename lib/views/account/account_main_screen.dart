@@ -1,3 +1,4 @@
+import 'package:delivery_app/views/bottom_nav_bar/bottom_nav_screen.dart';
 import 'package:delivery_app/views/home/home_screen.dart';
 import 'package:delivery_app/views/home/wallet.dart';
 import 'package:delivery_app/widgets/custom_icon_text_row.dart';
@@ -33,28 +34,28 @@ class AccountMainScreen extends StatelessWidget {
                   shrinkWrap: true,
                   children: [
                     CustomInkWell(
-                        onTap: (){Get.to(ProfileScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return ProfileScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.person,color: AppColors.primaryDarkBlue,size: 20,),text: "Profile",)),
                     CustomInkWell(
-                        onTap: (){Get.to(HomeScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  HomeScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.shopping_bag,color: AppColors.primaryDarkBlue,size: 20,),text: "Order",)),
                     CustomInkWell(
-                        onTap: (){Get.to(PaymentMethod());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  PaymentMethod();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.credit_card,color: AppColors.primaryDarkBlue,size: 20,),text: "Payment",)),
                     CustomInkWell(
-                        onTap: (){Get.to(MyWalletScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  MyWalletScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.account_balance_wallet,color: AppColors.primaryDarkBlue,size: 20,),text: "Wallet",)),
                     CustomInkWell(
-                        onTap: (){Get.to(TermsAndCondition());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  TermsAndCondition();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.article_sharp,color: AppColors.primaryDarkBlue,size: 20,),text: "Terms of use",)),
                     CustomInkWell(
-                        onTap: (){Get.to(PrivacyPolicyScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  PrivacyPolicyScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.article_outlined,color: AppColors.primaryDarkBlue,size: 20,),text: "Privacy Policy",)),
                     CustomInkWell(
-                        onTap: (){Get.to(CustomerSupportScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  CustomerSupportScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.support_agent,color: AppColors.primaryDarkBlue,size: 20,),text: "Customer support",)),
                     CustomInkWell(
-                        onTap: (){Get.to(FAQScreen());},
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context){return  FAQScreen();}));},
                         child: CustomIconTextRow(icon: Icon(Icons.person_search_rounded,color: AppColors.primaryDarkBlue,size: 20,),text: "FAQ",)),
 
 
